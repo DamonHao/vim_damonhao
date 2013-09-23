@@ -6,8 +6,8 @@
 # in the current directory
 
 # Create command cpp-cscope
-# #sudo cp cpp-cscope.sh /usr/bin/cpp-cscope
-# #chmod +x /usr/bin/cpp-cscope
+# $sudo cp cpp-cscope.sh /usr/bin/cpp-cscope
+# $sudo chmod +x /usr/bin/cpp-cscope
 
 #Usage: cpp-cscope
 #-----------------------------------------#
