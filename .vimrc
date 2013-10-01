@@ -48,7 +48,12 @@ set foldlevel=100       " Don't autofold anything (but I can still fold manually
 
 "Highlight current line
 set cursorline
-hi cursorline cterm=NONE ctermbg=darkred ctermfg=white
+"hi cursorline cterm=NONE ctermbg=darkred ctermfg=white
+
+"autocmd InsertLeave * se nocul  "use light color to highlight current line
+autocmd InsertEnter * se cul    "use light color to highlight current line
+
+"set cuc "highlight current column, equal to set cursorcolumn
 
 
 "--------------------------------------------------------------------------------
@@ -90,8 +95,8 @@ nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 "Show cscope's result in quickfix window
 :set cscopequickfix=s-,c-,d-,i-,t-,e-
 "Set shortcut for quickfix
-nmap <F6> :cn<cr>
-nmap <F7> :cp<cr>
+nmap <F11> :cn<cr>
+nmap <F10> :cp<cr>
 
 "--------------------------------------------------------------------------------
 "Plugin TagList :Tlist
