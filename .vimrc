@@ -47,13 +47,17 @@ set foldlevel=100       " Don't autofold anything (but I can still fold manually
 "set foldcolumn=4
 
 "Highlight current line
-set cursorline
+"set cursorline
 "hi cursorline cterm=NONE ctermbg=darkred ctermfg=white
-
 "autocmd InsertLeave * se nocul  "use light color to highlight current line
-autocmd InsertEnter * se cul    "use light color to highlight current line
+"autocmd InsertEnter * se cul    "use light color to highlight current line
 
 "set cuc "highlight current column, equal to set cursorcolumn
+
+"--------------------------------------------------------------------------------
+"set some shortcuts
+"--------------------------------------------------------------------------------
+set pastetoggle=<F9>
 
 
 "--------------------------------------------------------------------------------
@@ -108,7 +112,7 @@ let Tlist_Exit_OnlyWindow=1
 let g:winManagerWindowLayout='FileExplorer|TagList'
 "Toggle WinManager
 nmap wm :WMToggle<cr>
-
+nmap tl :Tlist<cr>
 "Omni completion
 "set completeopt=longest,menu
 
@@ -160,3 +164,18 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 "Automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
+
+"--------------------------------------------------------------------------------
+"plugin python-mode
+"--------------------------------------------------------------------------------
+" Pathogen load
+filetype off
+call pathogen#infect()
+call pathogen#helptags()
+filetype plugin indent on
+syntax on
+
+"--------------------------------------------------------------------------------
+"plugin NERDTree
+"--------------------------------------------------------------------------------
+nmap nt :NERDTreeToggle<cr>
