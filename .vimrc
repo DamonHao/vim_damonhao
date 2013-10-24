@@ -8,7 +8,7 @@ filetype plugin indent on
 set backspace=2
 set autoindent
 
-autocmd FileType h,hpp,cc,c,cpp set shiftwidth=4 | set softtabstop=4 | set cindent shiftwidth=4|
+autocmd FileType h,hpp,cc,c,cpp,java set shiftwidth=4 | set softtabstop=4 | set cindent shiftwidth=4|
 set expandtab
 
 "Show row number,"set num" is right two. 
@@ -179,3 +179,17 @@ syntax on
 "plugin NERDTree
 "--------------------------------------------------------------------------------
 nmap nt :NERDTreeToggle<cr>
+
+
+"--------------------------------------------------------------------------------
+"Set for Java
+"--------------------------------------------------------------------------------
+
+
+"--------------------------------------------------------------------------------
+"plugin javacomplete 
+"--------------------------------------------------------------------------------
+:setlocal omnifunc=javacomplete#Complete 
+:setlocal completefunc=javacomplete#CompleteParamsInfo 
+:inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
+:inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
