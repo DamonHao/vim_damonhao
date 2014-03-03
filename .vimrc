@@ -8,6 +8,11 @@ filetype plugin indent on
 set backspace=2
 set autoindent
 
+"set Chinese encoding"
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+
 autocmd FileType h,hpp,cc,c,cpp,java set shiftwidth=4 | set softtabstop=4 | set cindent shiftwidth=4|
 set expandtab
 
@@ -58,7 +63,6 @@ set foldlevel=100       " Don't autofold anything (but I can still fold manually
 "set some shortcuts
 "--------------------------------------------------------------------------------
 set pastetoggle=<F9>
-
 
 "--------------------------------------------------------------------------------
 "The following is plugin setting
