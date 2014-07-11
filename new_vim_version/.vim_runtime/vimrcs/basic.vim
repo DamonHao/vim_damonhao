@@ -11,6 +11,7 @@
 "    -> vimgrep searching and cope displaying
 "    -> Spell checking
 "    -> Misc
+"    -> Ctags search path
 "    -> Helper functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -19,6 +20,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Set line number
+set nu
+
 " Sets how many lines of history VIM has to remember
 set history=700
 
@@ -329,6 +333,11 @@ map <leader>q :e ~/buffer<cr>
 map <leader>pp :setlocal paste!<cr>
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ctags search path 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tags for include in /usr/include
+set tags+=~/.tags/usr_include_tags  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
