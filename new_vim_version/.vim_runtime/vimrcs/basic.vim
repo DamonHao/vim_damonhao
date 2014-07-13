@@ -337,7 +337,8 @@ map <leader>pp :setlocal paste!<cr>
 " => Ctags search path 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tags for include in /usr/include
-set tags+=~/.tags/usr_include_tags  
+set tags+=~/.tags/usr_include_direct.tags,~/.tags/usr_include_c++_4.8.tags
+set tags+=~/.tags/usr_include_arpa.tags,~/.tags/usr_include_netinet.tags  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
